@@ -1,1 +1,4 @@
-Bzip2 compression and decompression for Pipes streams
+bzlib-conduit
+=============
+
+Streaming compression/decompression via conduits.
