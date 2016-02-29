@@ -1,5 +1,5 @@
 name:                pipes-bzip
-version:             0.2.0.2
+version:             0.2.0.3
 synopsis:            Streaming compression/decompression via pipes.
 description:         Streaming compression/decompression via pipes.
 homepage:            https://github.com/chemist/pipes-bzip
@@ -30,19 +30,7 @@ library
                      , pipes-safe
                      , data-default
                      , bindings-DSL
-
-  if !os(windows)
-    extra-libraries:    bz2
-  else
-    install-includes:    bzlib.h, bzlib_private.h
-    include-dirs:        cbits
-    c-sources:           cbits/blocksort.c
-                         cbits/huffman.c
-                         cbits/crctable.c
-                         cbits/randtable.c
-                         cbits/compress.c
-                         cbits/decompress.c
-                         cbits/bzlib.c
+  extra-libraries:    bz2
 
 test-suite test
   type:                exitcode-stdio-1.0
