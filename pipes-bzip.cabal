@@ -1,5 +1,5 @@
 name:                pipes-bzip
-version:             0.2.0.3
+version:             0.2.0.4
 synopsis:            Streaming compression/decompression via pipes.
 description:         Streaming compression/decompression via pipes.
 homepage:            https://github.com/chemist/pipes-bzip
@@ -13,6 +13,9 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 data-files:          test/*.bz2
+                     test/sample1.9.bz2
+                     test/sample2.9.bz2
+                     test/sample3.9.bz2
                      test/*.ref
 
 source-repository head
