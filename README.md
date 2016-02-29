@@ -1,4 +1,4 @@
-bzlib-conduit
+pipes-bzip
 =============
 
-Streaming compression/decompression via conduits.
+Streaming compression/decompression via pipes.

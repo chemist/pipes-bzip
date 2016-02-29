@@ -85,11 +85,11 @@ throwIfMinus_ s m = CM.void $ throwIfMinus s m
 
 allocateStream :: MonadSafe m => m (Ptr C'bz_stream, IORef (Ptr CChar, Int))
 allocateStream = do
-  ptr    <- liftIO $ malloc -- free
-  register (liftIO $ free ptr)
+  ptr    <- liftIO $ malloc
+  register $ liftIO $ free ptr 
   inbuf  <- liftIO $ (mallocBytes bufSize >>= \p -> newIORef (p, bufSize))
   register (liftIO $ readIORef inbuf >>= \(p, _) -> free p)
-  outbuf <- liftIO $ (mallocBytes bufSize) -- free
+  outbuf <- liftIO $ mallocBytes bufSize 
   register (liftIO $ free outbuf)
   liftIO $ poke ptr $ C'bz_stream
     { c'bz_stream'next_in        = nullPtr

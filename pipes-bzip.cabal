@@ -57,6 +57,9 @@ test-suite test
                      , pipes-safe
                      , pipes-bytestring
                      , pipes
+                     , directory
+                     , MonadRandom
+                     , bzlib
 
 benchmark bench
   type:                exitcode-stdio-1.0
