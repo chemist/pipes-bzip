@@ -1,5 +1,5 @@
 name:                pipes-bzip
-version:             0.2.0.0
+version:             0.2.0.1
 synopsis:            Streaming compression/decompression via pipes.
 description:         Streaming compression/decompression via pipes.
 homepage:            https://github.com/chemist/pipes-bzip
@@ -21,7 +21,6 @@ source-repository head
 
 library
   exposed-modules:     Pipes.BZip
-                     , Pipes.BZip.Internal
 
   build-depends:       base == 4.*
                      , bytestring >=0.9 && <0.11
